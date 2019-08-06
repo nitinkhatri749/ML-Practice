@@ -2,7 +2,16 @@
 
 ## Data Preprocessing-
 
-### 1) Taking Care of Missing Data
+### 1) Loading/Importing the data
+Data needs to be numeric and stored as Matrices. NumPy is a Python package which stands for 'Numerical Python'. It is the core library for scientific computing. Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays. Pandas is a python library for data manipulation and analysis. We can load our data using pandas.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+```
+
+### 2) Taking Care of Missing Data
 
 Before starting we should have basic knowledge of Numpy, Pandas & sklearn.
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
@@ -22,7 +31,7 @@ imp.fit_transform(x_train)
 ```
 
 
-### 2) Encoding Categorial Features
+### 3) Encoding Categorial Features
 
 Since Machine Learning models are based on mathematical equation, therefore categorial features are encoded.
 
