@@ -1,6 +1,7 @@
 # ML-Practice
 
-NumPy (Numerical Python) is a linear algebra library in Python. 
-It is a very important library on which almost every data science or machine learning Python packages such as SciPy (Scientific Python), Mat−plotlib (plotting library), Scikit-learn, etc depends on to a reasonable extent.
-
-Almost everything has been covered on this topic
+# Data Preprocessing-
+Before starting we should have basic knowledge of Numpy, Pandas & sklearn.
+Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
+Data Preprocessing is used to take care of missing values in our data.
+We use Preprocessing module of sklearn to do this job.
