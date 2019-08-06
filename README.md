@@ -2,13 +2,17 @@
 
 ## Data Preprocessing-
 
-### 1) Loading/Importing the data
+### 1) Importing the Libraries & Loading the data
 Data needs to be numeric and stored as Matrices. NumPy is a Python package which stands for 'Numerical Python'. It is the core library for scientific computing. Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays. Pandas is a python library for data manipulation and analysis. We can load our data using pandas.
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+```
+To read a csv file-
+```python
+dataset = pd.read_csv('data.csv')
 ```
 
 ### 2) Taking Care of Missing Data
