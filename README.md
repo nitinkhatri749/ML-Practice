@@ -11,9 +11,11 @@ So we proceed with 2nd point everytime, 1st point was just to give the possibili
 
 We use Preprocessing module of sklearn to do this job.
 
-#from sklearn.preprocessing import Imputer  \n
-#imp = Imputer(missing_values ='Nan',  strategy='mean', axis=0)  \n
-#imp.fit_transform(x_train)
+from sklearn.preprocessing import Imputer  
+
+imp = Imputer(missing_values ='Nan',  strategy='mean', axis=0)  
+
+imp.fit_transform(x_train)
 
 
 # Encoding Categorial
