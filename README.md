@@ -10,3 +10,10 @@ Sometimes we may have missing data in our dataset so we have two options to take
 So we proceed with 2nd point everytime, 1st point was just to give the possibility.
 
 We use Preprocessing module of sklearn to do this job.
+
+-from sklearn.preprocessing import Imputer
+-imp = Imputer(missing_values ='Nan',  strategy='mean', axis=0)
+-imputer.fit_transform(x[:,1:3])
+
+
+# Encoding Categorial
