@@ -13,11 +13,13 @@ b) We can fill the missing values with the mean of that column values.
 So we proceed with 2nd point everytime, 1st point was just to give the possibility.
 We use Preprocessing module of sklearn to do this job.
 
+```python
 from sklearn.preprocessing import Imputer  
 
 imp = Imputer(missing_values ='Nan',  strategy='mean', axis=0)  
 
 imp.fit_transform(x_train)
+```
 
 
 2) Encoding Categorial Features
