@@ -23,3 +23,15 @@ imp.fit_transform(x_train)
 2) Encoding Categorial Features
 
 Since Machine Learning models are based on mathematical equation, therefore categorial features are encoded.
+
+from sklearn.preprocessing import LabelEncoder
+
+enc = LabelEncoder()
+
+y = enc.fit_transform(y)
+
+But in case if there are categorial features in our independent variable by which we are going to predict dependent variable then this method won't help that much because suppose we have a categorial column Country and after encoding countries will be encoded with integers - 0,1,2... and so on so to take care of this we use 'OneHotEncoder' class. Let's call it dummy encoding.
+
+from sklearn.preprocessing import OneHotEncoder
+
+onehotencoder = OneHotEncoder
