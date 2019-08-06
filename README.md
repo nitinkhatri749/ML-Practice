@@ -1,6 +1,7 @@
 # ML-Practice
 
 ## Data Preprocessing-
+Before starting we should have basic knowledge of Numpy, matplotlib, Pandas & sklearn which has been covered in other [repositories](https://github.com/nitinkhatri749).
 
 ### 1) Importing the Libraries & Loading the data
 Data needs to be numeric and stored as Matrices. NumPy is a Python package which stands for 'Numerical Python'. It is the core library for scientific computing. Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays. Pandas is a python library for data manipulation and analysis. We can load our data using pandas.
@@ -17,7 +18,6 @@ dataset = pd.read_csv('data.csv')
 
 ### 2) Taking Care of Missing Data
 
-Before starting we should have basic knowledge of Numpy, Pandas & sklearn.
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
 Sometimes we may have missing data in our dataset so we have two things to take care of -
