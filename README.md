@@ -40,5 +40,5 @@ from sklearn.preprocessing import OneHotEncoder
 
 onehotencoder = OneHotEncoder
 
-x = onehotencoder.fit_transform().toarray()
+x = onehotencoder.fit_transform(x).toarray()
 ```
