@@ -18,7 +18,7 @@ dataset = pd.read_csv('data.csv')
 
 ### 2) Taking Care of Missing Data
 
-* Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
+Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
 Sometimes we may have missing data in our dataset so we have two things to take care of -
 a) We can simply remove those rows where data is missing but this could be dangerous as they may have crucial data.
