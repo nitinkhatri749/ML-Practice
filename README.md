@@ -3,6 +3,7 @@
 # Data Preprocessing-
 
 1) Taking Care of Missing Data
+
 Before starting we should have basic knowledge of Numpy, Pandas & sklearn.
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
@@ -20,4 +21,5 @@ imp.fit_transform(x_train)
 
 
 2) Encoding Categorial Features
+
 Since Machine Learning models are based on mathematical equation, therefore categorial features are encoded.
