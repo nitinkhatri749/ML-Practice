@@ -1,6 +1,6 @@
 # ML-Practice
 
-# Data Preprocessing-
+## Data Preprocessing-
 
 1) Taking Care of Missing Data
 
