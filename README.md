@@ -46,6 +46,6 @@ But in case if there are categorial features in our independent variable by whic
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
-onehotencoder = OneHotEncoder
+onehotencoder = OneHotEncoder()
 x = onehotencoder.fit_transform(x).toarray()
 ```
