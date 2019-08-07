@@ -44,9 +44,10 @@ y = enc.fit_transform(y)
 ```
 But in case if there are categorial features in our independent variable by which we are going to predict dependent variable then this method won't help that much because suppose we have a categorial column Country and after encoding countries will be encoded with integers - 0,1,2... and so on so to take care of this we use 'OneHotEncoder' class. Let's call it dummy encoding.
 
+* Encoding the Independent Variable
 ```python
 from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder()
 x = onehotencoder.fit_transform(x).toarray()
 ```
-#### Note-We don't need dummy encoding on dependent variable, since Machine Learning Model will know that it's a category.
+##### Note - We don't need dummy encoding(OneHotEncoder) on dependent variable, since Machine Learning Model will know that it's a category.
