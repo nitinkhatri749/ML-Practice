@@ -49,3 +49,4 @@ from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder()
 x = onehotencoder.fit_transform(x).toarray()
 ```
+#### Note-We don't need dummy encoding on dependent variable, since Machine Learning Model will know that it's a category.
