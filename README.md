@@ -69,6 +69,10 @@ x = onehotencoder.fit_transform(x).toarray()
 
 
 ### 4) Splitting the dataset into the Training set and Test set
+
+Training set- on which we build Machine Learning model
+Test set-a set on which we test the performane of this machine learning model 
+and the performance on the test set shouldn't be different from the performance on the training set..
 ```python
 from sklearn.cross_validation import train_test_split
 #from sklearn.model_selection import train_test_split (newer versions of anaconda)
@@ -85,3 +89,13 @@ sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
 ```
+We are doing feature scaling on dummy variables too because algorithm converge much faster.
+
+##### Note-
+we don't need to apply feature scaling to y(y_train, y_test--dependent variable) in case of classification.
+But we will see for regression when the dependent variable is huge range of values, we will need to apply feature scaling to dependent variable y as well
+
+
+
+
+
