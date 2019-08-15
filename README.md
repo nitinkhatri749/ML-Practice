@@ -23,6 +23,14 @@ To read a csv file-
 ```python
 dataset = pd.read_csv('data.csv')
 ```
+##### Note - 
+The data to be imported should be in cwd(Current Working Directory) and we have to specify cwd in spyder, and to do that-
+
+```python
+import os
+os.getcwd() # To know about current working direcctory
+os.chdir('Desired path to be changed') # to change the working directory
+```
 
 
 ### 2) Taking Care of Missing Data/ Impute the Data
