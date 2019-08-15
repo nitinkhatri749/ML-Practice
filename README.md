@@ -25,7 +25,7 @@ dataset = pd.read_csv('data.csv')
 ```
 
 
-### 2) Taking Care of Missing Data/ Imputr the Data
+### 2) Taking Care of Missing Data/ Impute the Data
 
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
@@ -60,7 +60,7 @@ enc_x = LabelEncoder()
 x[:,a] = enc.fit_transform(x[:,a]) 
 onehotencoder = OneHotEncoder(categorical_features=[a])
 x = onehotencoder.fit_transform(x).toarray()
-# a-independent feature matrix column to be encoded or there can be more than 1 collumn
+# a-independent feature matrix column to be encoded or there can be more than 1 column
 ```
 ##### Note -
 1) We don't need dummy encoding(OneHotEncoder) on dependent variable, since Machine Learning Model will know that it's a category.
@@ -71,7 +71,7 @@ x = onehotencoder.fit_transform(x).toarray()
 ### 4) Splitting the dataset into the Training set and Test set
 ```python
 from sklearn.cross_validation import train_test_split
-#from sklearn.model_selection import train_test_split (newer versions of anaconda)'''
+#from sklearn.model_selection import train_test_split (newer versions of anaconda)```
 
 
 ### 5) Feature Scaling
