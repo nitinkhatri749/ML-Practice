@@ -35,12 +35,12 @@ os.chdir('Desired path to be changed') # to change the working directory
 
 ### b) Taking Care of Missing Data/ Impute the Data
 
-Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
-Data Preprocessing is used to take care of missing values in our data. 
-Sometimes we may have missing data in our dataset so we have two things to take care of -\
+Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.\
+Data Preprocessing is used to take care of missing values in our data.\
+Sometimes we may have missing data in our dataset so we have two things to take care of-.\
 a) We can simply remove those rows where data is missing but this could be dangerous as they may have crucial data.\
 b) We can fill the missing values with the mean of that column values.\
-So we proceed with 2nd point everytime, 1st point was just to give the possibility.
+So we proceed with 2nd point everytime, 1st point was just to give the possibility.\
 We use Preprocessing module of sklearn to do this job.
 
 ```python
@@ -78,8 +78,8 @@ x = onehotencoder.fit_transform(x).toarray()
 
 ### d) Splitting the dataset into the Training set and Test set
 
-Training set- on which we build Machine Learning model\
-Test set-a set on which we test the performane of this machine learning model\
+Training set- on which we build Machine Learning model.\
+Test set-a set on which we test the performane of this machine learning model.\
 and the performance on the test set shouldn't be different from the performance on the training set.
 ```python
 from sklearn.cross_validation import train_test_split
@@ -97,7 +97,7 @@ sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
 ```
-We are doing feature scaling on dummy variables too because algorithm converge much faster.
+We are doing feature scaling on dummy variables too because algorithm converge much faster.\ 
 fit & transform training set but only transform test set.
 
 ##### Note-
@@ -171,7 +171,7 @@ In my pc the Salary_Data.csv was in 'E:\Machine Learning A-Z\Part 2 - Regression
 ## 3) Multiple Linear Regresion
 
 
-We want to build a model to see if there is some linear dependencies between all these variables.
+We want to build a model to see if there is some linear dependencies between all these variables.\
 Before we get started we should have knowledge about P-value.
 
 * P- value - 
@@ -181,21 +181,21 @@ we will reject the "null hypothesis" of their experiment - in other words, they'
 
 * Building a model- We'll be doing it by Backward Elimination
 Let's say we have lots of columns and not all of these columns are potential predictors for a dependent variable, 
-so we need to decide which ones to keep and wich ones to throw out the columns or get rid of the data.
-Why can't we just use everything in our model, 2 reasons-\
-1) garbage in = garbage out \
+so we need to decide which ones to keep and wich ones to throw out the columns or get rid of the data.\
+Why can't we just use everything in our model, 2 reasons-.\
+1) garbage in = garbage out.\
 2) Explain those variables/features.\
 To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
 
 * Backward Elimination -\
-STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5)\
-STEP 2 - Fit the modell with all possible predictors\
-STEP 3- Consider the predictor wit the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN\
-STEP 4- Remove the predicttor\
-STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP -3\
-FIN : Model is Ready 
+STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5).\
+STEP 2 - Fit the modell with all possible predictors.\
+STEP 3- Consider the predictor wit the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN.\
+STEP 4- Remove the predicttor.\
+STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP -3.\
+FIN : Model is Ready. 
 
-H0 - Opposite of what we are testing\
+H0 - Opposite of what we are testing.\
 H1 - The claim we are testing
 
 H0(null hypothesis) = the dependent and the independent variables are not associated.\
