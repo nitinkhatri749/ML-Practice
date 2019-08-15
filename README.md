@@ -98,6 +98,7 @@ x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
 ```
 We are doing feature scaling on dummy variables too because algorithm converge much faster.
+fit & transform training set but only transform test set.
 
 ##### Note-
 we don't need to apply feature scaling to y(y_train, y_test--dependent variable) in case of classification.
@@ -160,6 +161,61 @@ plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
 ```
+
+we'll train simple linear regression model that will learn the correlations between dependent and independent variables and then fit simple linear regression to training set.
+Simple linear regressor learnt the correlations of the training set i.e. learnt the relation between independent and dependent variable.
+In my pc the Salary_Data.csv was in 'E:\Machine Learning A-Z\Part 2 - Regression\Section 4 - Simple Linear Regression' path so I changed the path. Feature Scaling was not required as Python library takes care of it by itself.
+
+
+
+## 3) Multiple Linear Regresion
+
+
+We want to build a model to see if there is some linear dependencies between all these variables.
+Before we get started we should have knowledge about P-value.
+
+* P- value - 
+P value is a statistical measure that helps us determine whether or not their hypotheses are correct.
+Usually, if the P value of a data set is below a certain pre-determined amount (like, for instance, 0.05), 
+we will reject the "null hypothesis" of their experiment - in other words, 
+they'll rule out the hypothesis that the variables of their experiment had no meaningful effect on the results. 
+
+* Building a model- We'll be doing it by Backward Elimination
+Let's say we have lots of columns and not all of these columns are potential predictors for a dependent variable, 
+so we need to decide which ones to keep and wich ones to throw out the columns or get rid of the data.
+Why can't we just use everything in our model, 2 reasons-
+1) garbage in = garbage out
+2) Explain those variables/features.
+To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
+
+* Backward Elimination -
+STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5)
+STEP 2 - Fit the modell with all possible predictors
+STEP 3- Consider the predictor wit the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN
+STEP 4- Remove the predicttor
+STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP -3
+
+FIN : Model is Ready 
+
+H0 - Opposite of what we are testing
+H1 - The claim we are testing
+
+H0(null hypothesis) = the dependent and the independent variables are not associated
+H1(alternative hypothesis) = They both are associated.
+Here H1 has to prove his statement that they both(dependent and independent variables) are associated. So in order to prove that he need to show that the p-value is less than the significant level which is 0.05.
+In backward elimination we need to keep only the predictors whose p-value is less than the significant level. So we are eliminating the predictors whose p-values are higher than the significant level, which in turn helps us to retain only the predictors whose p-value is less than 0.05.
+
+for example- p-value at 84% says that the probability of null hypothesis is true is 84% (and 16% that alternative hypothesis is true, which is positive ie. the data is good)
+
+
+
+
+
+
+
+
+
+
 
 
 
