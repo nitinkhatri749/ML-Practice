@@ -71,7 +71,8 @@ x = onehotencoder.fit_transform(x).toarray()
 ### 4) Splitting the dataset into the Training set and Test set
 ```python
 from sklearn.cross_validation import train_test_split
-#from sklearn.model_selection import train_test_split (newer versions of anaconda)```
+#from sklearn.model_selection import train_test_split (newer versions of anaconda)
+```
 
 
 ### 5) Feature Scaling
@@ -82,4 +83,5 @@ Features scaling is very important in machine learning. Most of the time our ind
 from sklearn.preprocessing import StandardScaler
 sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
-x_test = sc_x.transform(x_test)```
+x_test = sc_x.transform(x_test)
+```
