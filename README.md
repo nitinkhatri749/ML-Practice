@@ -198,6 +198,7 @@ STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP 
 FIN : Model is Ready 
 
 H0 - Opposite of what we are testing
+
 H1 - The claim we are testing
 
 H0(null hypothesis) = the dependent and the independent variables are not associated
