@@ -1,5 +1,10 @@
 # ML-Practice
 
+Entire work is done on Spyder(Scientific Python Development Environment). So many Introduction videos are available on [Spyder](https://www.youtube.com/results?search_query=spyder+introduction). 
+
+###### Prerequisites-
+One should have knowledge of - Python and it's libraries - Numpy (Python package used for Scientific Computing), Matplotlib (Data Visualization library), Pandas(used for data maniulation and importing data), scikit-learn/sklearn (Python library for machine learning & predictive modeling)
+
 ## Data Preprocessing-
 Before starting we should have basic knowledge of Numpy, matplotlib, Pandas & sklearn which has been covered(or still working on) in other [repositories](https://github.com/nitinkhatri749).
 
@@ -16,7 +21,7 @@ To read a csv file-
 dataset = pd.read_csv('data.csv')
 ```
 
-### 2) Taking Care of Missing Data
+### 2) Taking Care of Missing Data/ Imputr the Data
 
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
@@ -44,10 +49,17 @@ y = enc.fit_transform(y)
 ```
 But in case if there are categorial features in our independent variable by which we are going to predict dependent variable then this method won't help that much because suppose we have a categorial column Country and after encoding countries will be encoded with integers - 0,1,2... and so on so to take care of this we use 'OneHotEncoder' class. Let's call it dummy encoding.
 
-* Encoding the Independent Variable
+* Encoding the Independent Variable/ Creating dummy variables
 ```python
 from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder()
 x = onehotencoder.fit_transform(x).toarray()
 ```
 ##### Note - We don't need dummy encoding(OneHotEncoder) on dependent variable, since Machine Learning Model will know that it's a category.
+
+
+### 4) Splitting the dataset into the Training set and Test set
+```python
+from sklearn.cross_validation import train_test_split
+#from sklearn.model_selection import train_test_split (newer versions of anaconda)'''
+
