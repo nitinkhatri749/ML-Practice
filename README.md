@@ -5,12 +5,12 @@ Entire work is done on Spyder(Scientific Python Development Environment). So man
 ###### Prerequisites-
 One should have knowledge of - Python and it's libraries - Numpy (Python package used for Scientific Computing), Matplotlib (Data Visualization library), Pandas(used for data maniulation and importing data), scikit-learn/sklearn (Python library for machine learning & predictive modeling)
 
-## Data Preprocessing-
+## 1) Data Preprocessing-
 Before starting we should have basic knowledge of Numpy, matplotlib, Pandas & sklearn which has been covered(or still working on) in other [repositories](https://github.com/nitinkhatri749).
 
 
 
-### 1) Importing the Libraries & Loading the data
+### a) Importing the Libraries & Loading the data
 
 Data needs to be numeric and stored as Matrices. NumPy is a Python package which stands for 'Numerical Python'. It is the core library for scientific computing. Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays. Pandas is a python library for data manipulation and analysis. We can load our data using pandas.
 
@@ -33,7 +33,7 @@ os.chdir('Desired path to be changed') # to change the working directory
 ```
 
 
-### 2) Taking Care of Missing Data/ Impute the Data
+### b) Taking Care of Missing Data/ Impute the Data
 
 Before starting with ML, we have to learn how to prepare data and we call it Data_Preprocessing.
 Data Preprocessing is used to take care of missing values in our data. 
@@ -50,7 +50,7 @@ imp.fit_transform(x)
 ```
 
 
-### 3) Encoding Categorial Features
+### c) Encoding Categorial Features
 
 Since Machine Learning models are based on mathematical equation, therefore categorial features are encoded.
 
@@ -76,7 +76,7 @@ x = onehotencoder.fit_transform(x).toarray()
 
 
 
-### 4) Splitting the dataset into the Training set and Test set
+### d) Splitting the dataset into the Training set and Test set
 
 Training set- on which we build Machine Learning model
 Test set-a set on which we test the performane of this machine learning model 
@@ -87,7 +87,7 @@ from sklearn.cross_validation import train_test_split
 ```
 
 
-### 5) Feature Scaling
+### e) Feature Scaling
 
 Features scaling is very important in machine learning. Most of the time our independent features are not on the same scale. This will cause some issues in your Machine Learning models. It's because a lot of machine learning models are based on Euclidean distance. The Euclidean distance between two points is the square root of the sum of the square coordinates.
 
@@ -104,6 +104,62 @@ we don't need to apply feature scaling to y(y_train, y_test--dependent variable)
 But we will see for regression when the dependent variable is huge range of values, we will need to apply feature scaling to dependent variable y as well
 
 
+
+## 2) Simple Linear Regression- 
+```python
+# Simple Linear Regression
+
+# Importing the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+
+# Checking cwd
+os.getcwd()
+os.chdir('E:\Machine Learning A-Z\Part 2 - Regression\Section 4 - Simple Linear Regression')
+
+# Importing the dataset
+dataset = pd.read_csv('Salary_Data.csv')
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 1].values
+
+# Splitting the dataset into the Training set and Test set
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
+
+# Feature Scaling
+"""from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.transform(X_test)
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train)"""
+
+# Fitting Simple Linear Regression to the Training set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+# Predicting the Test set results
+y_pred = regressor.predict(X_test)
+
+# Visualising the Training set results
+plt.scatter(X_train, y_train, color = 'red')
+plt.plot(X_train, regressor.predict(X_train), color = 'blue')
+plt.title('Salary vs Experience (Training set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+
+# Visualising the Test set results
+plt.scatter(X_test, y_test, color = 'red')
+plt.plot(X_train, regressor.predict(X_train), color = 'blue')
+plt.title('Salary vs Experience (Test set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+```
 
 
 
