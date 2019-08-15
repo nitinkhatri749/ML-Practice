@@ -206,7 +206,7 @@ H1(alternative hypothesis) = They both are associated.
 Here H1 has to prove his statement that they both(dependent and independent variables) are associated. So in order to prove that he need to show that the p-value is less than the significant level which is 0.05.
 In backward elimination we need to keep only the predictors whose p-value is less than the significant level. So we are eliminating the predictors whose p-values are higher than the significant level, which in turn helps us to retain only the predictors whose p-value is less than 0.05.
 
-for example- p-value at 84% says that the probability of null hypothesis is true is 84% (and 16% that alternative hypothesis is true, which is positive ie. the data is good)
+** for example- p-value at 84% says that the probability of null hypothesis is true is 84% (and 16% that alternative hypothesis is true, which is positive ie. the data is good)
 
 
 
