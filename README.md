@@ -183,7 +183,7 @@ we will reject the "null hypothesis" of their experiment - in other words, they'
 Let's say we have lots of columns and not all of these columns are potential predictors for a dependent variable, 
 so we need to decide which ones to keep and wich ones to throw out the columns or get rid of the data.
 Why can't we just use everything in our model, 2 reasons-\
-1) garbage in = garbage out\
+1) garbage in = garbage out \
 2) Explain those variables/features.\
 To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
 
