@@ -189,8 +189,8 @@ Why can't we just use everything in our model, 2 reasons-
 To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
 
 * Backward Elimination -
-STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5)
-STEP 2 - Fit the modell with all possible predictors
+STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5)\
+STEP 2 - Fit the modell with all possible predictors\
 STEP 3- Consider the predictor wit the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN
 STEP 4- Remove the predicttor
 STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP -3
@@ -206,7 +206,7 @@ H1(alternative hypothesis) = They both are associated.
 Here H1 has to prove his statement that they both(dependent and independent variables) are associated. So in order to prove that he need to show that the p-value is less than the significant level which is 0.05.
 In backward elimination we need to keep only the predictors whose p-value is less than the significant level. So we are eliminating the predictors whose p-values are higher than the significant level, which in turn helps us to retain only the predictors whose p-value is less than 0.05.
 
-** for example- p-value at 84% says that the probability of null hypothesis is true is 84% (and 16% that alternative hypothesis is true, which is positive ie. the data is good)
+for example- p-value at 84% says that the probability of null hypothesis is true is 84% (and 16% that alternative hypothesis is true, which is positive ie. the data is good)
 
 
 
