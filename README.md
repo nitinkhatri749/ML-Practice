@@ -7,7 +7,7 @@ One should have knowledge of - \
 Python and it's libraries - Numpy (Python package used for Scientific Computing)\
 Matplotlib (Data Visualization library)\
 Pandas(used for data maniulation and importing data)\ 
-scikit-learn/sklearn (Python library for machine learning & predictive modeling)\
+scikit-learn/sklearn (Python library for machine learning & predictive modeling)
 
 ## 1) Data Preprocessing-
 Before starting we should have basic knowledge of Numpy, matplotlib, Pandas & sklearn which has been covered(or still working on) in other [repositories](https://github.com/nitinkhatri749).
