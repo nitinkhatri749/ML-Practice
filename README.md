@@ -112,6 +112,8 @@ But we will see for regression when the dependent variable is huge range of valu
 
 
 ## 2) Simple Linear Regression- 
+We have a data of Past Employees with Salaries and Years of experience. We have to build a Simple Linear Model using the same data and predict the salaries and find the correlations between dependent variable(Salary) and indepdendent variable(Years of Experience). 
+
 ```python
 # Simple Linear Regression
 
@@ -174,10 +176,12 @@ In my pc the Salary_Data.csv was in 'E:\Machine Learning A-Z\Part 2 - Regression
 
 
 ## 3) Multiple Linear Regresion
-
+Suppose we have data of 50 Startups which include- R&D Spend, Administration,	Marketing Spend, State,	Profit. We have to analyse the data and figure out If we want to invest in one of the startup then which startup should we be funding so that we get good returns and which one of the above features contribute maximum into profit.
 
 We want to build a model to see if there is some linear dependencies between all these variables.<br/>
 Before we get started we should have knowledge about P-value.
+
+Before starting, we should have knowledge of the following topics.-
 
 * P- value - 
 P value is a statistical measure that helps us determine whether or not their hypotheses are correct.<br/>
@@ -255,7 +259,9 @@ y_pred = regressor.predict(X_test)
 ```
 
 ### building optimal model using backward elimination
-since pthon library include x0 = 1 (b0x0 + b1x1  and so on) and statsmodel library doen't so we need to add a column of ones in independent features matrix(in the begining/ index=0)
+Now if we want to find the features which contribute the most then we'll use P-values. Having Significance value decided(0.05) we will only keep those vraibles/features whose value is less than 0.05 (SL) & then we eliminate the features with P-value greater than 0.05. In our data we find that the 'R&D Spend' contribute the most. With higher R&D higher the profit, so one should invest in the startup with higher 'R&D Spend'. We'll use statsmodels module to get the P-values of all the features and other important terms.
+
+since pthon library include x0 = 1 (b0x0 + b1x1  and so on) and statsmodel library doesn't so we need to add a column of ones in independent features matrix(in the begining/ index=0)
 ```python
 import statsmodels.formula.api as sm
 x = np.append(np.ones((50,1),dtype=int), x, axis = 1)
