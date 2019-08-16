@@ -194,6 +194,7 @@ so we need to decide which ones to keep and wich ones to throw out the columns o
 Why can't we just use everything in our model, 2 reasons-.<br/>
 1) garbage in = garbage out.<br/>
 2) Explain those variables/features.<br/>
+
 To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
 
 * Backward Elimination -<br/>
