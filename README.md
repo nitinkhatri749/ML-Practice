@@ -260,7 +260,7 @@ y_pred = regressor.predict(X_test)
 ```
 
 ### building optimal model using backward elimination
-Now if we want to find the features which contribute the most then we'll use P-values. Having Significance value decided(0.05) we will only keep those vraibles/features whose value is less than 0.05 (SL) & then we eliminate the features with P-value greater than 0.05. In our data we find that the 'R&D Spend' contribute the most. With higher R&D higher the profit, so one should invest in the startup with higher 'R&D Spend'. We'll use statsmodels module to get the P-values of all the features and other important terms.
+Now if we want to find the features which contribute the most then we'll use P-values. Having Significance value decided(0.05) we will only keep those variables/features whose value is less than 0.05 (SL) & then we eliminate the features with P-value greater than 0.05. In our data we find that the 'R&D Spend' contribute the most. With higher R&D higher the profit, so one should invest in the startup with higher 'R&D Spend'. We'll use statsmodels module to get the P-values of all the features and other important terms.
 
 since pthon library include x0 = 1 (b0x0 + b1x1  and so on) and statsmodel library doesn't so we need to add a column of ones in independent features matrix(in the begining/ index=0)
 ```python
