@@ -3,11 +3,12 @@
 Entire work is done on Spyder(Scientific Python Development Environment). So many Introduction videos are available on [Spyder](https://www.youtube.com/results?search_query=spyder+introduction). 
 
 ###### Prerequisites-
-One should have knowledge of Python and it's libraries -<br/>
+One should have prior knowledge of Python and it's libraries -<br/>
 Numpy (Python package used for Scientific Computing) <br/>
 Matplotlib (Data Visualization library) <br/>
 Pandas(used for data maniulation and importing data) <br/>
-scikit-learn/sklearn (Python library for machine learning & predictive modeling)
+scikit-learn/sklearn (Python library for machine learning & predictive modeling)<br/>
+And also basic knowledge of Regression, Classification, Supervised Ml, Unsupervised ML and differences.
 
 ## 1) Data Preprocessing-
 Before starting we should have basic knowledge of Numpy, matplotlib, Pandas & sklearn which has been covered(or still working on) in other [repositories](https://github.com/nitinkhatri749).
