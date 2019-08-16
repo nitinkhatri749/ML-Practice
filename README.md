@@ -3,7 +3,7 @@
 Entire work is done on Spyder(Scientific Python Development Environment). So many Introduction videos are available on [Spyder](https://www.youtube.com/results?search_query=spyder+introduction). 
 
 ###### Prerequisites-
-One should have knowledge of - <br/>
+One should have knowledge of -<br/>
 Python and it's libraries - Numpy (Python package used for Scientific Computing) <br/>
 Matplotlib (Data Visualization library) <br/>
 Pandas(used for data maniulation and importing data) <br/>
