@@ -249,7 +249,33 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 ```
 
+### building optimal model using backward elimination
+since pthon library include x0 = 1 (b0x0 + b1x1  and so on) and statsmodel library doen't so we need to add a column of ones in independent features matrix(in the begining/ index=0)
+```python
+import statsmodels.formula.api as sm
+x = np.append(np.ones((50,1),dtype=int), x, axis = 1)
 
+x_opt = x[:, [0, 1, 2, 3, 4, 5]]
+# to fit usng stat library we will use OLS(Ordinary least square)
+regressor_OLS = sm.OLS(endog = y, exog = x_opt).fit()
+regressor_OLS.summary()
+
+x_opt = x[:, [0, 1, 3, 4, 5]]
+regressor_OLS = sm.OLS(endog = y, exog = x_opt).fit()
+regressor_OLS.summary()
+
+x_opt = x[:, [0, 3, 4, 5]]
+regressor_OLS = sm.OLS(endog = y, exog = x_opt).fit()
+regressor_OLS.summary()
+
+x_opt = x[:, [0, 3, 5]]
+regressor_OLS = sm.OLS(endog = y, exog = x_opt).fit()
+regressor_OLS.summary()
+
+x_opt = x[:, [0, 3]]
+regressor_OLS = sm.OLS(endog = y, exog = x_opt).fit()
+regressor_OLS.summary()
+```
 
 
 
