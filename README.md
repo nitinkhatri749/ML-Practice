@@ -290,7 +290,7 @@ regressor_OLS.summary()
 ```
 
 
-# 4) Polynomial Regression-
+## 4) Polynomial Regression-
 We are building regresors which are not linear.<br/>
 We just add polynomial term in the multiple linear regression equation.
 
@@ -360,9 +360,71 @@ plt.show()
 lin_reg.predict(6.5)
 
 # Predicting a new result with Polynomial Regression
-lin_reg_2.predict(poly_reg.fit_transform(6.5))```
-
+lin_reg_2.predict(poly_reg.fit_transform(6.5))
+```
 Feature scaling was not required as linearmodel module takes care of that part by itself.
+
+## 5) Support Vector Regression(SVR)
+
+SVR is a type of support vector machine that supports linear and non-linear regression.
+I have found some useful videos on SVR - [1](https://www.youtube.com/watch?v=Y6RRHw9uN9o), [2](https://www.youtube.com/watch?v=xLkk6MUrvrw)
+
+SVR uses the same basic idea as Support Vector Machine (SVM), a classification algorithm, but applies it to predict real values rather than a class.
+SVR is a type of support vector machine that supports linear and non-linear regression.
+
+* Basics Of SVM(Support Vector Machine)-
+-SVM can be used to do binary classification(the task of classifying the elements of a given set into two groups (predicting which group each one belongs to)).<br/>
+-SVM finds a hyper-plane (line in 2d, plane in 3d, etc) that separates its training data in such a way that the distance between the hyper plane and the closest points from each class is maximized.<br/>
+-once SVM finds this hyper-plane, you can classify new data points by seeing which side of this hyper-plane they land on.<br/>
+-SVM can only be used on data that is linearly separable (i.e. a hyper-plane can be drawn between the two groups).<br/>
+-Fear not though, as a common way to make data linearly separable is to map it to a higher dimension.<br/>
+-SVMs simply tell you what class a new data point falls in, not the probability that it's in that class(disadvantage).<br/>
+
+One of the prominent kernels for SVR is Gaussian kernel.
+
+```python
+# SVR
+
+# Importing the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Importing the dataset
+dataset = pd.read_csv('Position_Salaries.csv')
+X = dataset.iloc[:, 1:2].values
+y = dataset.iloc[:, 2].values
+
+# Splitting the dataset into the Training set and Test set
+"""from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)"""
+
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+sc_y = StandardScaler()
+X = sc_X.fit_transform(X)
+y = sc_y.fit_transform(y)
+
+# Fitting SVR to the dataset
+from sklearn.svm import SVR
+regressor = SVR(kernel = 'rbf')
+regressor.fit(X, y)
+
+# Predicting a new result
+y_pred = regressor.predict(6.5)
+y_pred = sc_y.inverse_transform(y_pred)
+
+# Visualising the SVR results
+plt.scatter(X, y, color = 'red')
+plt.plot(X, regressor.predict(X), color = 'blue')
+plt.title('Truth or Bluff (SVR)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
+```
+
+Feature Scaling becomes important in this case as this library doesn't include feature scaling in it, so in previous cases we skipped feature scaling, but not here.
 
 
 
