@@ -367,12 +367,12 @@ Feature scaling was not required as linearmodel module takes care of that part b
 ## 5) Support Vector Regression(SVR)
 
 SVR is a type of support vector machine that supports linear and non-linear regression.
-I have found some useful videos on SVR - [1](https://www.youtube.com/watch?v=Y6RRHw9uN9o), [2](https://www.youtube.com/watch?v=xLkk6MUrvrw)
+I have found some useful videos on SVR - [Video-1](https://www.youtube.com/watch?v=Y6RRHw9uN9o), [Video-2](https://www.youtube.com/watch?v=xLkk6MUrvrw)
 
 SVR uses the same basic idea as Support Vector Machine (SVM), a classification algorithm, but applies it to predict real values rather than a class.
 SVR is a type of support vector machine that supports linear and non-linear regression.
 
-* Basics Of SVM(Support Vector Machine)-
+* Basics Of SVM(Support Vector Machine)-<br/>
 -SVM can be used to do binary classification(the task of classifying the elements of a given set into two groups (predicting which group each one belongs to)).<br/>
 -SVM finds a hyper-plane (line in 2d, plane in 3d, etc) that separates its training data in such a way that the distance between the hyper plane and the closest points from each class is maximized.<br/>
 -once SVM finds this hyper-plane, you can classify new data points by seeing which side of this hyper-plane they land on.<br/>
