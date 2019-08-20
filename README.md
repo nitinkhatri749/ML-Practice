@@ -198,9 +198,9 @@ Why can't we just use everything in our model, 2 reasons-.<br/>
 To construct a model I'm using [Backward Elimination](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P14-Step-by-step-Blueprints-For-Building-Models.pdf)
 
 * Backward Elimination -<br/>
-STEP 1 - Select a significance level to stayin the model(eg - sl: 0.5).<br/>
-STEP 2 - Fit the modell with all possible predictors.<br/>
-STEP 3- Consider the predictor wit the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN.<br/>
+STEP 1 - Select a significance level to stay in the model(eg - sl: 0.5).<br/>
+STEP 2 - Fit the model with all possible predictors.<br/>
+STEP 3- Consider the predictor with the heighest P-value. If P > SL, go to STEP-4 otherwise go to FIN.<br/>
 STEP 4- Remove the predicttor.<br/>
 STEP 5- Fit the model without this variable (Refit the model) & GO BACK to STEP -3.<br/>
 FIN : Model is Ready. 
